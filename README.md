@@ -2,6 +2,7 @@
 
 - Nextjs & Typescript
 - Ruby on rails
+- Graphql
 
 ## Tech details:
 
