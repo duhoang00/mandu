@@ -6,7 +6,8 @@
 ## Tech details:
 
 - Ruby version
-  ruby "3.0.1"
+
+  - ruby "3.0.1"
 
 - System dependencies
 
