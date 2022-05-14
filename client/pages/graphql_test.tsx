@@ -1,8 +1,23 @@
 import type { NextPage } from "next";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-const Home: NextPage = () => {
-  return <>HI</>;
+const Home: NextPage = ({ data }: any) => {
+  const products = data?.product;
+  if (!products) {
+    return <>No data</>;
+  }
+  return (
+    <>
+      {products.map((product: any) => (
+        <div key={product.id}>
+          <li>ID: {product.id}</li>
+          <li>Brand: {product.productBrand}</li>
+          <li>Name: {product.productName}</li>
+          <li>Description: {product.productDescription}</li>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default Home;
@@ -18,15 +33,15 @@ export async function getStaticProps() {
       query GetProducts {
         product {
           id
+          productBrand
           productName
+          productDescription
         }
       }
     `,
   });
 
-  console.log({ ...data });
-
-  const rs = { props: { ...data } };
+  const rs = { props: { data } };
 
   return rs;
 }
