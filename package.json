@@ -2,6 +2,9 @@
   "name": "mandu",
   "private": true,
   "version": "0.1.0",
+  "scripts": {
+    "heroku-postbuild": "cd client && yarn install && yarn build"
+  },
   "dependencies": {
     "@rails/webpacker": "5.4.3",
     "webpack": "^4.46.0",
