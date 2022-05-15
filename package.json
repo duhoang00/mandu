@@ -1,5 +1,6 @@
 {
-  "name": "api",
+  "name": "mandu",
+  "private": true,
   "version": "0.1.0",
   "dependencies": {
     "@rails/webpacker": "5.4.3",
