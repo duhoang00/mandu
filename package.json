@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "heroku-postbuild": "cd client && yarn install && yarn build"
+    "heroku-prebuild": "cd client && yarn install && yarn build:production"
   },
   "dependencies": {
     "@rails/webpacker": "5.4.3",
