@@ -1,2 +1,2 @@
 web: cd client && yarn install && yarn start
-api: bundle exec rails s -p 3001
+api: rails s -e production
