@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function MyApp({ Component , pageProps  }) {
-    const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+    const NEXT_PUBLIC_API_URL = "https://mandu-app.herokuapp.com/" || 0;
     const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_1__.ApolloClient({
         uri: `${NEXT_PUBLIC_API_URL}/graphql/`,
         cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_1__.InMemoryCache()
